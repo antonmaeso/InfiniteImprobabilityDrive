@@ -1,13 +1,17 @@
 import math
+import senOut as s
 
-AccelX = 1
-AccelY = 2
-AccelZ = 3
+def getCorrectionAngles():
+    AccelX = s.AccelX #get from sensor
+    AccelY = s.AccelY
+    AccelZ = s.AccelZ
 
-theta = math.atan( AccelX/ (math.sqrt( (AccelY**2)+ (AccelZ**2) )) )
-psi = math.atan( AccelY/ (math.sqrt( (AccelX**2)+ (AccelZ**2) )) )
-omega = math.atan( (math.sqrt( (AccelX**2)+ (AccelY**2) ))/ AccelZ )
+    omega = math.atan( AccelX/ (math.sqrt( (AccelY**2)+ (AccelZ**2) )) ) #x axis offset
+    psi = math.atan( AccelY/ (math.sqrt( (AccelX**2)+ (AccelZ**2) )) ) #y axis offset
+    theta = math.atan( (math.sqrt( (AccelX**2)+ (AccelY**2) ))/ AccelZ ) #z axis offset
 
-print('Theta: '+str(theta))
-print('Psi: '+str(psi))
-print('Omega: '+str(omega))
+    print('Theta: '+str(theta))
+    print('Psi: '+str(psi))
+    print('Omega: '+str(omega))
+
+    return [theta,psi,omega]
