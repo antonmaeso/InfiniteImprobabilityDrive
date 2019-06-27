@@ -14,6 +14,8 @@ class sensor1(object):#mock sensor data
 class sensor2(object):#mock sensor data
     gyroscope = [1,2,3]
 
+def AccelArray():
+    return sensor1.accelerometer
 
 def AccelX():
     return sensor1.accelerometer[0]
@@ -24,6 +26,9 @@ def AccelY():
 def AccelZ():
     return sensor1.accelerometer[2]
 
+def MagArray():
+    return sensor1.magnetometer
+
 def MagX():
     return sensor1.magnetometer[0]
 
@@ -32,6 +37,9 @@ def MagY():
 
 def MagZ():
     return sensor1.magnetometer[2]
+
+def GyroArray():
+    return sensor2.gyroscope
 
 def GyroX():
     return sensor2.gyroscope[0]
