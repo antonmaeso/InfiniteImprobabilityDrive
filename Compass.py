@@ -12,8 +12,8 @@ def bearing():
     pitch = asin(accXnorm)
     roll = -asin(accYnorm/cos(pitch))
 
-    magXcomp = magRawcos(pitch)+*(mag_raw+2)*sin(pitch)
-    magYcomp = magRawsin(roll)*sin(pitch)+*(mag_raw+1)*cos(roll)-*(mag_raw+2)*sin(roll)*cos(pitch)
+    magXcomp = magRaw[0]*cos(pitch)+(magRaw[2]+2)*sin(pitch)
+    magYcomp = magRaw[0]*sin(roll)*sin(pitch)+(magRaw[1]+1)*cos(roll)-(magRaw[2]+2)*sin(roll)*cos(pitch)
 
     heading = 180*atan2(magYcomp,magXcomp)/pi
     return heading
