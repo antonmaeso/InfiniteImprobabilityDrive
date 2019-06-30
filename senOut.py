@@ -3,16 +3,16 @@ import busio
 import adafruit_fxos8700
 import adafruit_fxas21002c
 
-#i2c = busio.I2C(board.SCL, board.SDA)
-#sensor1 = adafruit_fxos8700.FXOS8700(i2c)#accel and mag
-#sensor2 = adafruit_fxas21002c.FXAS21002C(i2c)#gyro
+i2c = busio.I2C(board.SCL, board.SDA)
+sensor1 = adafruit_fxos8700.FXOS8700(i2c)#accel and mag
+sensor2 = adafruit_fxas21002c.FXAS21002C(i2c)#gyro
 
-class sensor1(object):#mock sensor data
-    accelerometer = [1,2,3]
-    magnetometer = [1,2,3]
+# class sensor1(object):#mock sensor data
+#     accelerometer = [1,2,3]
+#     magnetometer = [1,2,3]
 
-class sensor2(object):#mock sensor data
-    gyroscope = [1,2,3]
+# class sensor2(object):#mock sensor data
+#     gyroscope = [1,2,3]
 
 def AccelArray():
     return sensor1.accelerometer
