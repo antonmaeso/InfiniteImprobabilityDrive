@@ -47,4 +47,4 @@ class compassCalibration(object):
         print("magYmin: "+"{0:.4f}".format(compassCalibration.magYmin))
         print("magZmin: "+"{0:.4f}".format(compassCalibration.magZmin))
 
-compassCalibration.HardIronCalibration()
+# compassCalibration.HardIronCalibration()
