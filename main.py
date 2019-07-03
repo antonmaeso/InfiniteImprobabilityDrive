@@ -15,7 +15,7 @@ currentTime = dt.datetime.now()
 northMotor = motor(18)
 #southMotor = motor()
 while currentTime < timeToEnd:
-    if buzzer.isActive() != True:
+    if northMotor.isActive() != True:
         heading = Co.bearing([-85.9,47,-97.4,30.3,-200.9,-74.2])
     
         print("Heading: "+"{0:.4f}".format(heading), end = "\r")
